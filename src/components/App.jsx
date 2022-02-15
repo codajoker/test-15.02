@@ -9,7 +9,7 @@ export const App = () => {
   useEffect(() => {
     Api()
       .then(data => {
-        setArrayMoney(data);
+        setArrayMoney(data.filter(item => item.base_ccy === 'UAH'));
         setLoader(true);
       })
       .catch(alert);

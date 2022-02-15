@@ -8,7 +8,6 @@ export function Convert({ arrayMoney }) {
   const [resultInput, setResultInput] = useState(0);
   const [resultSelect, setResultSelect] = useState('EUR');
   useEffect(() => {
-    console.log(arrayMoney);
     setResultInput(
       (Number(arrayMoney.find(option => option.ccy === firstSelect).buy) *
         firstInput) /
