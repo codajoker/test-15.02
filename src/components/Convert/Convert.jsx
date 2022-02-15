@@ -1,11 +1,5 @@
 import { useEffect, useState } from 'react';
-import {
-  Wrapper,
-  ResultBlock,
-  Input,
-  Select,
-  Container,
-} from './ConvertStyled';
+import { Wrapper, Input, Select, Container } from './ConvertStyled';
 import { FaEquals } from 'react-icons/fa';
 
 export function Convert({ arrayMoney }) {
@@ -20,7 +14,7 @@ export function Convert({ arrayMoney }) {
         firstInput) /
         Number(arrayMoney.find(option => option.ccy === resultSelect).buy)
     );
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [firstInput, resultSelect]);
   useEffect(() => {
     setFirstInput(
@@ -28,7 +22,7 @@ export function Convert({ arrayMoney }) {
         resultInput) /
         Number(arrayMoney.find(option => option.ccy === firstSelect).buy)
     );
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [resultInput, firstSelect]);
   return (
     <Container>
